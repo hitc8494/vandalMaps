@@ -1,0 +1,30 @@
+To properly setup your git access to this repository, there are a few things you need to do.
+
+First, create and account with github.
+
+Once that's done, you are going to need a ssh public and private key.
+
+To get these, you will need to generate a keypair using the ssh tools.
+First, navigate to the ssh directory. 
+$ cd ~/.ssh
+
+Once that's done, use the command
+$ ssh-keygen -t rsa -C "yourname@emailyouregisteredongihubwith.com"
+
+Just enter through the different prompts until it asks you for your passphrase.
+REMEMBER THIS AFTER YOU ENTER IT. YOU WILL NEED IT.
+
+Ok, your keys are g2g, but your permissions might NOT be. To fix that
+$ chmod 700 ~/.ssh
+$ chmod 600 ~/.ssh/*
+
+Now grab that key! (If you already have xclip installed disregard the first part)
+$ sudo apt-get install xclip
+$ cat ~/.ssh/id_rsa.pub | xclip -sel clip
+
+Now you need to add that public key to your git account.
+Navigate to the "SSH Public Keys" section of your account.
+
+Add a new key, leave the name blank, and paste in the conent that you just copied to your clipboard using xclip.
+
+Save the key, you are ready to push to our github!
