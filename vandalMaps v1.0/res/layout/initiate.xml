@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<TextView  
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:text="@string/hello"
+		android:minHeight="60px"
+		android:gravity="center"	
+		android:textSize="30px"
+    />
+	<LinearLayout xmlns:andoid="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+			<TextView  
+    			android:layout_width="fill_parent" 
+    			android:layout_height="wrap_content" 
+    			android:text="@string/greet"
+    			android:gravity="center"
+    		/>
+	</LinearLayout>
+	<LinearLayout xmlns:andoid="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight=".4"
+		android:gravity="center_horizontal"
+		>
+    		<Button xmlns:andoid="http://schemas.android.com/apk/res/android"
+    			android:id="@+id/MapButton"
+   				android:text="@string/map"
+   				android:layout_width="220px"
+            	android:textSize="18px"
+        		android:layout_height="50px"
+        		android:gravity="center"
+        		/>
+    		<Button xmlns:andoid="http://schemas.android.com/apk/res/android"
+    			android:id="@+id/SearchButton"
+   				android:text="@string/search"
+   				android:layout_width="220px"
+            	android:textSize="18px"
+        		android:layout_height="50px"
+        		android:gravity="center"
+        		/>
+        	<Button xmlns:andoid="http://schemas.android.com/apk/res/android"
+    			android:id="@+id/ListButton"
+   				android:text="@string/list"
+   				android:layout_width="220px"
+            	android:textSize="18px"
+        		android:layout_height="50px"
+        		android:gravity="center"
+        		/>
+        	<Button xmlns:andoid="http://schemas.android.com/apk/res/android"
+    			android:id="@+id/AboutButton"
+   				android:text="@string/about"
+   				android:layout_width="220px"
+            	android:textSize="18px"
+        		android:layout_height="50px"
+        		android:gravity="center"
+        		/>
+	</LinearLayout>
+	
+</LinearLayout>

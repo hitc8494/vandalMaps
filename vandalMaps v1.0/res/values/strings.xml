@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">vandalMaps</string>
+    <string name="banner">vandalMaps BANNER!</string>
+    <string name="app_name">vandalMaps v1.0</string>
+	<string name="schemas">http://schemas.android.com/apk/res/android</string>
+	<string name="greet">Choose an option to begin. At any time press the menu button to display the campus map.</string>
+	<string name="search">Search Buildings</string>
+	<string name="search_title">Search Campus Buildings</string>
+	<string name="map">Go to Map</string>
+	<string name="map_title">Campus Map</string>
+	<string name="list">List Buildings</string>
+	<string name="about">About</string>
+	<string name="about_title">About vandalMaps</string>
+	<string name="about_text">This application was developed in cooperation with Taylor Hasenpflug and Abhay Patil.\n\n
+	Advising provided by Bruce Bolden and Bob Rinker\n\n
+	Android build written by Scott Beddall</string>
+	<string name="building_text">This will list our beautiful buildings.</string>
+	<string name="list_title">List of Buildings</string>
+</resources>
