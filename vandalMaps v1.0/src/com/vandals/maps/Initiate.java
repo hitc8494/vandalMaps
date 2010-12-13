@@ -17,8 +17,10 @@ public class Initiate extends Activity implements OnClickListener{
         //set up click listeners for the buttons!
         View mapButton = findViewById(R.id.MapButton);
         mapButton.setOnClickListener(this);
-        View searchButton = findViewById(R.id.SearchButton);
-        searchButton.setOnClickListener(this);
+        
+  /*      View searchButton = findViewById(R.id.SearchButton);
+        searchButton.setOnClickListener(this);*/
+        
         View listButton = findViewById(R.id.ListButton);
         listButton.setOnClickListener(this);
         View aboutButton = findViewById(R.id.AboutButton);
@@ -44,11 +46,11 @@ public class Initiate extends Activity implements OnClickListener{
 			startActivity(k);
 			break;
 			
-		case R.id.SearchButton:
+	/*	case R.id.SearchButton:
 			Intent j = new Intent(this,Search_buildings.class);
 			startActivity(j);
 			break;
-			
+		*/	
 		case R.id.ListButton:
 			Intent l = new Intent(this,List_Buildings.class);
 			startActivity(l);

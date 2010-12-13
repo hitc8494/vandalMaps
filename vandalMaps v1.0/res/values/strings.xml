@@ -13,8 +13,18 @@
 	<string name="about">About</string>
 	<string name="about_title">About vandalMaps</string>
 	<string name="about_text">This application was developed in cooperation with Taylor Hasenpflug and Abhay Patil.\n\n
-	Advising provided by Bruce Bolden and Bob Rinker\n\n
-	Android build written by Scott Beddall</string>
+	Advising provided by Bruce Bolden and Bob Rinker\n\nAndroid build written by Scott Beddall</string>
 	<string name="building_text">This will list our beautiful buildings.</string>
 	<string name="list_title">List of Buildings</string>
+	
+	
+	<string name="JEB_Title">Janssen Engineering</string>
+	<string name="JEB_Summary">Jeb</string>
+	<string name="Gauss_Title">Gauss-Johnson Engineering</string>
+	<string name="Gauss_Summary">GJ</string>
+	<string name="Buch_Title">Buchanan Engineering</string>
+	<string name="Buch_Summary">Bel</string>
+	
+	<string name="add_new_marker">Refresh Your Location</string>
+	
 </resources>

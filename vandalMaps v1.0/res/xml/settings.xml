@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <CheckBoxPreference
+  	android:key="Jeb"
+  	android:title="@string/JEB_Title"
+  	android:summary="@string/JEB_Summary"
+  	android:defaultValue="false" />
+  
+  <CheckBoxPreference
+  	android:key="Gauss"
+  	android:title="@string/Gauss_Title"
+  	android:summary="@string/Gauss_Summary"
+  	android:defaultValue="false" />
+  	
+   <CheckBoxPreference
+  	android:key="Buch"
+  	android:title="@string/Buch_Title"
+  	android:summary="@string/Buch_Summary"
+  	android:defaultValue="false" /> 	
+  	
+  </PreferenceScreen>

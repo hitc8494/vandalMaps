@@ -2,25 +2,24 @@ package com.vandals.maps;
 
 import java.util.ArrayList;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.location.LocationListener;
+import android.widget.Toast;
 
-import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
-import com.google.android.maps.MapView;
-import com.google.android.maps.Overlay;
 import com.google.android.maps.OverlayItem;
 
 
 
 public class MapsItemizedOverlay extends ItemizedOverlay{
 	//array to hold each of our geopoints
-	private ArrayList<OverlayItem> mOverlays = new ArrayList<OverlayItem>();
-	
+	public ArrayList<OverlayItem> mOverlays = new ArrayList<OverlayItem>();
+	private Context mContext;
 		
-	public MapsItemizedOverlay(Drawable defaultMarker) {
-		super(boundCenterBottom(defaultMarker));
+	public MapsItemizedOverlay(Context context, Drawable defaultMarker) {
+	    super(boundCenterBottom(defaultMarker));
+	    mContext = context;
 	}
 
 	@Override
@@ -39,9 +38,12 @@ public class MapsItemizedOverlay extends ItemizedOverlay{
 	}
 	
 	  @Override
-	  public boolean onTap(GeoPoint p, MapView map) {
-		  
-		  
-	      return false;
+	  public boolean onTap(int pIndex) {
+		Toast.makeText(mContext, mOverlays.get(pIndex).getSnippet(),Toast.LENGTH_SHORT).show();
+		return true;
 	  }	
+	  
+	 public void clear(){
+		 mOverlays.clear();
+	 }
 }

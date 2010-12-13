@@ -39,14 +39,6 @@
         		android:layout_height="50px"
         		android:gravity="center"
         		/>
-    		<Button xmlns:andoid="http://schemas.android.com/apk/res/android"
-    			android:id="@+id/SearchButton"
-   				android:text="@string/search"
-   				android:layout_width="220px"
-            	android:textSize="18px"
-        		android:layout_height="50px"
-        		android:gravity="center"
-        		/>
         	<Button xmlns:andoid="http://schemas.android.com/apk/res/android"
     			android:id="@+id/ListButton"
    				android:text="@string/list"
@@ -58,7 +50,7 @@
         	<Button xmlns:andoid="http://schemas.android.com/apk/res/android"
     			android:id="@+id/AboutButton"
    				android:text="@string/about"
-   				android:layout_width="220px"
+   				android:layout_width="150px"
             	android:textSize="18px"
         		android:layout_height="50px"
         		android:gravity="center"
