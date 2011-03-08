@@ -11,7 +11,7 @@ import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.OverlayItem;
 
 
-
+//mostly hacked up Google Dev code.
 public class MapsItemizedOverlay extends ItemizedOverlay{
 	//array to hold each of our geopoints
 	public ArrayList<OverlayItem> mOverlays = new ArrayList<OverlayItem>();

@@ -1,22 +1,17 @@
 package com.vandals.maps;
 
 import java.util.List;
-
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
-import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.location.LocationProvider;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.widget.LinearLayout;
-
+import android.widget.Toast;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapController;
@@ -27,32 +22,9 @@ import com.google.android.maps.OverlayItem;
 
 public class View_map extends MapActivity{
 
-	private static final String TAG = null;
-	private double mLongitude = 0;
-	private double mLatitude = 0;
-	private final boolean enabledOnly = true;
 	public static final int ACCURACY_FINE = 0x00000001;
-	private String bestProvider;
+	private boolean onCampus = true;
 	
-	/* My Location Listener */ /*
-	private final LocationListener locationListener = new LocationListener() {
-		  public void onLocationChanged(Location location) {
-			  overlayme.clear();
-	          Double longitude = location.getLongitude()*1E6;
-	          Double latitude = location.getLatitude()*1E6;
-	          GeoPoint locationPoint = new GeoPoint(latitude.intValue(),longitude.intValue());
-	    	  OverlayItem overlayitem = new OverlayItem(locationPoint, "Me", "Me");
-	          overlayme.addOverlay(overlayitem);
-	    	  mapOverlays.add(overlayme);
-		  }
-		  public void onProviderDisabled(String provider){}
-		  public void onProviderEnabled(String provider) {}
-		  public void onStatusChanged(String provider, int status, Bundle extras) {}
-	};
-	*
-	*/
-	//this code is stripped directly from the google tutorial
-
 	// Define a listener that responds to location updates
 	LocationListener locationListener = new LocationListener() {
 	    public void onLocationChanged(Location location) {
@@ -65,7 +37,6 @@ public class View_map extends MapActivity{
 	    public void onProviderDisabled(String provider) {}
 	  };
 	  LocationManager locationManager;
-	
 	
 	//To make the map work
 	LinearLayout linearLayout;
@@ -107,51 +78,26 @@ public class View_map extends MapActivity{
     	 * These need to be set up with the correct drawable icon.
     	 * */ 
     	itemizedoverlay = new MapsItemizedOverlay(this,drawable);
-    	//overlayme = new MapsItemizedOverlay(this,me);
-    	
+  
     	addOverlaysFromPref(itemizedoverlay);
     	initMyLocation();
     	
-    	/*
-    	//this controls me
-    	//Google's solution
-    	// Register the listener with the Location Manager to receive location updates
-    	locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
-    	locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
-    	Location lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-    	
-    	GeoPoint gp;
-    	if (lastKnownLocation != null){	
-    		int longTemp = (int)(lastKnownLocation.getLongitude()* 1000000);
-    		int latTemp = (int)(lastKnownLocation.getLatitude() * 1000000);
-    		gp = new GeoPoint(latTemp, longTemp);
-    	}
-    	else {
-    		gp = new GeoPoint(37579413,-101074219);
-    	}
-    	OverlayItem mypoint = new OverlayItem(gp, "Me", "Me");	
-    	overlayme.addOverlay(mypoint);
-    	*/
-    	
-    	
-    	
+    	Context context = getApplicationContext();    
+        /*
+         * Right here, if the user is outside the bounds of the U of I Campus, notify them and set center to to
+         * Jenssen Engineering. 
+         * 
+         * Otherwise, we are centering to the user. Easy Peasy
+         * 
+         */
+    	if(onCampus == false) {
+            String oncampus = "You are not on campus, animated to the center of U of I.";
+            int duration = Toast.LENGTH_SHORT;
+            Toast.makeText(context, oncampus, duration).show();  
+        }
     	
     	/*Populate overlays on the map with the icons from itemizedoverlay*/
     	mapOverlays.add(itemizedoverlay);
-    	//mapOverlays.add(overlayme);
-    	
-    	//center the map on Jenssen Engineering
-    	//GeoPoint center = new GeoPoint(46728941,-117011411);
-    	/*
-    	 * Right here, if the user is outside the bounds of the U of I Campus, notify them and set center to to
-    	 * Jenssen Engineering. 
-    	 * 
-    	 * Otherwise, we are centering to the user. Easy Peasy
-    	 * 
-    	 */
-    	//mapController.setCenter(gp);
-    	//mapController.animateTo(gp);
-    	//mapController.setZoom(17);
 	}
 	
 	private void initMyLocation(){
@@ -160,15 +106,29 @@ public class View_map extends MapActivity{
         overlayme.runOnFirstFix(new Runnable() {
             @Override
             public void run() {
-                mapController.setZoom(17);
-                mapController.setCenter(overlayme.getMyLocation());
-                mapController.animateTo(overlayme.getMyLocation());
-            }       
+               
+                GeoPoint me = overlayme.getMyLocation();
+                int myx = me.getLongitudeE6();//x
+                int myy = me.getLatitudeE6(); //y         
+                if(myx >= -117031903 && myx <= -117001390 && myy <= 46733713 && myy >= 46722535) {//I'm on campus 
+                    mapController.setZoom(17);
+                    mapController.setCenter(overlayme.getMyLocation());
+                    mapController.animateTo(overlayme.getMyLocation());
+                }
+                else { //not on campus
+                    onCampus = false;
+                    GeoPoint center = new GeoPoint(46729044,-117014372);
+                    mapController.setZoom(17);
+                    mapController.setCenter(center);
+                    mapController.animateTo(center);
+                }
+             }       
         });
         mapOverlays.add(overlayme);
     }
 	
-	
+	//biggest waste of LoC I have ever seen. A SQLite database is in the works
+	//to replace this heinous crime against humanity.
 	public void addOverlaysFromPref(MapsItemizedOverlay itemizedoverlay){
 		/*Part of ugly hack*/
     	GeoPoint hack = new GeoPoint(51096623,1190918);
@@ -519,7 +479,7 @@ public class View_map extends MapActivity{
 	}
 	*/
 
-	//make sure to shut off the GPS system
+	//make sure to shut off the GPS system and resume when needed again
 	@Override 
 	public void onDestroy(){
 		super.onDestroy();
@@ -539,59 +499,3 @@ public class View_map extends MapActivity{
 	    overlayme.enableMyLocation();
 	}
 }
-
-
-/*Hack to solve the map erroring out when no overlays are present 
-invisipoint = this.getResources().getDrawable(R.drawable.invisipoint);
-invisible = new MapsItemizedOverlay(this,invisipoint);
-mapOverlays.add(invisible);*/
-
-/*Add whatever the user wants to the map according to their preferences to our list of
- * possible overlays*/
-
-
-/*Set up the location managers needed *//*
-mlocManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-//LocationListener mlocListener = new MyLocationListener();
-mlocManager.requestLocationUpdates( LocationManager.GPS_PROVIDER, 6000, 0, locationListener);
-
-
-//set up a criteria
-
-Criteria criteria = new Criteria();
-criteria.setAccuracy(Criteria.ACCURACY_FINE);
-criteria.setAltitudeRequired(false);
-criteria.setBearingRequired(false);
-criteria.setCostAllowed(true);
-criteria.setPowerRequirement(Criteria.POWER_LOW);
-
-//using our criteria and our location manager dig out our location
-bestProvider = mlocManager.getBestProvider(criteria, true);
-
-loc = mlocManager.getLastKnownLocation(bestProvider);
-
-//get our location on startup
-Double longitude = loc.getLongitude()*1E6;
-Double latitude = loc.getLatitude()*1E6;
-GeoPoint me = new GeoPoint(latitude.intValue(),longitude.intValue());
-OverlayItem mypoint = new OverlayItem(me, "Me", "Me");  
-overlayme.addOverlay(mypoint);
-*/
-/* After much frustration, trying something from StackOverflow user Janne Oksanen*/
-
-/*
-mlocManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
-Location lastKnownLoc = mlocManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-
-GeoPoint gp;
-if (lastKnownLoc != null){  
-    int longTemp = (int)(lastKnownLoc.getLongitude()* 1000000);
-    int latTemp = (int)(lastKnownLoc.getLatitude() * 1000000);
-    gp = new GeoPoint(latTemp, longTemp);
-}
-else {
-    gp = new GeoPoint(37579413,-101074219);
-}
-OverlayItem mypoint = new OverlayItem(gp, "Me", "Me");  
-overlayme.addOverlay(mypoint);
-*/

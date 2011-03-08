@@ -6,7 +6,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
 
-
+//seriously looking forward to building the SQLite database to replace this.
 public class List_Buildings extends PreferenceActivity{
 	
     private static final boolean option1 = false;
@@ -64,7 +64,6 @@ public class List_Buildings extends PreferenceActivity{
     private static final boolean option53 = false;
     private static final boolean option54 = false;
     private static final boolean option55 = false;      
-    
     
 	@Override
 	public void onCreate(Bundle savedInstanceState){
