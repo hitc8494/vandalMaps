@@ -28,3 +28,5 @@ Navigate to the "SSH Public Keys" section of your account.
 Add a new key, leave the name blank, and paste in the conent that you just copied to your clipboard using xclip.
 
 Save the key, you are ready to push to our github!
+
+Badgers.
