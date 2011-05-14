@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:id="@+id/layout"
+	android:stretchColumns="0">
+	<TableRow>
+		<TableLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/tableleft">
+			<TableRow>
+				<TextView		  
+				 	android:layout_height="fill_parent"
+				 	android:text=""
+				 	android:id="@+id/fullname"
+				 	android:gravity="left"
+				 	android:padding="3dip"
+				 	android:textSize="12pt">
+				</TextView>
+			</TableRow>
+			<TableRow>
+				<TextView
+					android:layout_height="fill_parent"
+					android:text=""
+					android:id="@+id/abbrev"
+					android:gravity="left"	
+					android:padding="3dip">
+				</TextView>
+			</TableRow>
+		</TableLayout>
+		<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+			android:text=""
+			android:id="@+id/cb"
+			android:layout_height="wrap_content"
+			android:checked="false"
+			android:layout_gravity="center_vertical|right"
+			android:padding="3dip">
+		</CheckBox>
+	</TableRow>
+</TableLayout>
