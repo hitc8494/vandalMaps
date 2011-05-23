@@ -31,9 +31,11 @@ public class View_map extends MapActivity{
 	private static boolean onCampus = true;
 	SQLiteDatabase db;
     Cursor myCur = null;
+    GeoPoint center = null;
+    
     
 	// Define a listener that responds to location updates
-	//this is not even used.
+	//this is not even used. Why do I still have this?
 	LocationListener locationListener = new LocationListener() {
 	    public void onLocationChanged(Location location) {
 	      // Called when a new location is found by the network location provider.
@@ -58,7 +60,6 @@ public class View_map extends MapActivity{
 	private static MapsItemizedOverlay itemizedoverlay;
 	//private static MapsItemizedOverlay invisible;
 	
-	
 	private static MyLocationOverlay overlayme; 
 	
 	private static MapController mapController;
@@ -73,6 +74,14 @@ public class View_map extends MapActivity{
     	mapView.setBuiltInZoomControls(true);
        	mapOverlays = mapView.getOverlays();
        	
+       	//get our extras
+       
+       	Log.d(TAG,"Grabbing Extras");
+       	Bundle extras = getIntent().getExtras();
+        if(extras != null) {//we have a center!
+         //   Log.d(TAG,"EXTRA 1: " + extras.getInt("lat"));
+            center = new GeoPoint(-extras.getInt("lat"),extras.getInt("long"));            
+        }
     	/* Also setup a mapController so we can do the awesome stuff the Android is capable of*/
     	mapController = mapView.getController();
   
@@ -99,7 +108,7 @@ public class View_map extends MapActivity{
          * 
          */
     	if(onCampus == false) {
-            String oncampus = "You are not on campus, animated to the center of U of I.";
+            String oncampus = "You are not on campus, animated to the center of U of I or your selection";
             int duration = Toast.LENGTH_SHORT;
             Toast.makeText(context, oncampus, duration).show();  
         }
@@ -119,16 +128,29 @@ public class View_map extends MapActivity{
                 int myx = me.getLongitudeE6();//x
                 int myy = me.getLatitudeE6(); //y         
                 if(myx >= -117031903 && myx <= -117001390 && myy <= 46733713 && myy >= 46722535) {//I'm on campus 
-                    mapController.setZoom(17);
-                    mapController.setCenter(overlayme.getMyLocation());
-                    mapController.animateTo(overlayme.getMyLocation());
+                    if(center == null) {
+                        mapController.setZoom(17);
+                        mapController.setCenter(overlayme.getMyLocation());
+                        mapController.animateTo(overlayme.getMyLocation());
+                    }
+                    else {
+                        mapController.setZoom(17);
+                        mapController.setCenter(center);
+                        mapController.animateTo(center);
+                    }
                 }
                 else { //not on campus
                     onCampus = false;
-                    GeoPoint center = new GeoPoint(46729044,-117014372);
-                    mapController.setZoom(17);
-                    mapController.setCenter(center);
-                    mapController.animateTo(center);
+                    if(center == null) {
+                        center = new GeoPoint(46729044,-117014372);
+                        mapController.setZoom(17);
+                        mapController.setCenter(center);
+                        mapController.animateTo(center);
+                    }else {
+                        mapController.setZoom(17);
+                        mapController.setCenter(center);
+                        mapController.animateTo(center);
+                    }
                 }
              }       
         });

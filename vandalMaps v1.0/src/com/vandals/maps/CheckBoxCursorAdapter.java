@@ -3,6 +3,7 @@ package com.vandals.maps;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
@@ -16,50 +17,51 @@ import android.widget.TextView;
 
 public class CheckBoxCursorAdapter extends SimpleCursorAdapter{
     static final String TAG = "CheckBoxCursorAdapter";
-    Context context;
+    final Context contextMain;
     Cursor c;
     SQLiteDatabase db;
     
     public CheckBoxCursorAdapter(Context context, int layout, Cursor c,
             String[] from, int[] to, SQLiteDatabase db) {
         super(context, layout, c, from, to);
-        this.context = context;
+        this.contextMain = context;
         this.c = c;
         this.db = db;
     }
     
     
     @Override   
-    public void bindView(View view, Context context, Cursor cursor) {
-            view.setOnLongClickListener(new OnLongClickListener() {
-
+    public void bindView(View view, final Context context, Cursor cursor) {
+            final int latitude = cursor.getInt(cursor.getColumnIndexOrThrow(BuildingOpenHelper.C_YCOORD));
+            final int longitude = cursor.getInt(cursor.getColumnIndexOrThrow(BuildingOpenHelper.C_XCOORD));
+            
+            view.setOnLongClickListener(new OnLongClickListener() {    
                 @Override
                 public boolean onLongClick(View v) {
-                    // TODO Auto-generated method stub
+                    Intent i = new Intent(contextMain,View_map.class);
+                    i.putExtra("lat", latitude);
+                    i.putExtra("long", longitude);
+                    Log.d(TAG,"Latitude onLongClick" + latitude + "");
+                    Log.d(TAG,"Longitude onLongClick" + longitude +"");
+                    
+                    contextMain.startActivity(i);
                     return false;
-                }
-                
-                
+                } 
             });
         
-        
-            final int cbindex = cursor.getColumnIndexOrThrow(BuildingOpenHelper.C_DISPLAYED);
-            final int cbFullindex = cursor.getColumnIndexOrThrow(BuildingOpenHelper.C_NAME);
-            final int cbAbbrevindex = cursor.getColumnIndexOrThrow(BuildingOpenHelper.C_ABBRV);
 
             CheckBox cb = (CheckBox)view.findViewById(R.id.cb);
             TextView cbFull = (TextView)view.findViewById(R.id.fullname);
             TextView cbAbbrev = (TextView)view.findViewById(R.id.abbrev);
+
+            final String abbrv = cursor.getString(cursor.getColumnIndexOrThrow(BuildingOpenHelper.C_ABBRV));
             
-            
-            final String abbrv = cursor.getString(cbAbbrevindex);
-            
-            cbFull.setText(cursor.getString(cbFullindex));
+            cbFull.setText(cursor.getString(cursor.getColumnIndexOrThrow(BuildingOpenHelper.C_NAME)));
             cbAbbrev.setText(abbrv);
        
-            cb.setChecked(cursor.getInt(cbindex) == 1 ? true : false);
+            cb.setChecked(cursor.getInt(cursor.getColumnIndexOrThrow(BuildingOpenHelper.C_DISPLAYED)) == 1 ? true : false);
             
-            Log.v(TAG, "displayed = " + Long.toString(cursor.getInt(cbindex)));
+            Log.v(TAG, "displayed = " + Long.toString(cursor.getInt(cursor.getColumnIndexOrThrow(BuildingOpenHelper.C_DISPLAYED))));
  
             cb.setOnCheckedChangeListener(new OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton cb, boolean isChecked) {            

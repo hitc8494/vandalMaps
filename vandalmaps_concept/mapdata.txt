@@ -1,0 +1,108 @@
+<string "a&a_title">Art & Architecture</string>
+<string "a&a_summary">A&A</string>
+<string "aaid_title">Art & Architecture Interior Design</string>
+<string "aaid_summary">AAID</string>
+<string "ad_title">Administration</string>
+<string "ad_summary">AD</string>
+<string "aeeb_title">Ag & Ext Education</string>
+<string "aeeb_summary">AEEB</string>
+<string "agbio_title">Agricultural Biotechnology</string>
+<string "agbio_summary">AGBIO</string>
+<string "ag sci_title">Agricultural Science</string>
+<string "ag sci_summary">AG SCI</string>
+<string "alb_title">J.A. Albertson/Business</string>
+<string "alb_summary">ALB</string>
+<string "alc_title">Alumni Center</string>
+<string "alc_summary">ALC</string>
+<string "arp_title">Animal Research Pavilion</string>
+<string "arp_summary">ARP</string>
+<string "bel_title">Buchanan Engineering Lab</string>
+<string "bel_summary">BEL</string>
+<string "bri_title">Carol Ryrie Brink Hall</string>
+<string "bri_summary">BRI</string>
+<string "ceb_title">Continuing Education</string>
+<string "ceb_summary">CEB</string>
+<string "dairy_title">Dairy Research Center</string>
+<string "dairy_summary">DAIRY</string>
+<string "ed_title">Education</string>
+<string "ed_summary">ED</string>
+<string "ep_title">Engineering/Physics</string>
+<string "ep_summary">EP</string>
+<string "fields_title">Athletic Fields</string>
+<string "fields_summary">FIELDS</string>
+<string "frc_title">Food Research Center</string>
+<string "frc_summary">FRC</string>
+<string "gas_title">Graduate Art Studio</string>
+<string "gas_summary">GAS</string>
+<string "gch_title">Golf Clubhouse</string>
+<string "gch_summary">GCH</string>
+<string "gh_title">Greenhouse</string>
+<string "gh_summary">GH</string>
+<string "gj_title">Gauss</string>
+<string "gj_summary">GJ</string>
+<string "hrtng_title">Hartung Theatre</string>
+<string "hrtng_summary">HRTNG</string>
+<string "idc_title">Idaho Commons</string>
+<string "idc_summary">IDC</string>
+<string "incub_title">Business Technology Incubator</string>
+<string "incub_summary">INCUB</string>
+<string "ited_title">Industrial Technology Education</string>
+<string "ited_summary">ITED</string>
+<string "jeb_title">Janssen Engineering</string>
+<string "jeb_summary">JEB</string>
+<string "jml_title">J.W. Martin Laboratory</string>
+<string "jml_summary">JML</string>
+<string "kibbie_title">Kibbie</string>
+<string "kibbie_summary">KIBBIE</string>
+<string "law_title">Menard Law</string>
+<string "law_summary">LAW</string>
+<string "lib_title">Library</string>
+<string "lib_summary">LIB</string>
+<string "life_title">Life Science South</string>
+<string "life_summary">LIFE</string>
+<string "llc_title">Living & Learning Community</string>
+<string "llc_summary">LLC</string>
+<string "mccl_title">McClure Hall</string>
+<string "mccl_summary">MCCL</string>
+<string "m gym_title">Memorial Gym</string>
+<string "m gym_summary">M GYM</string>
+<string "mines_title">Mines</string>
+<string "mines_summary">MINES</string>
+<string "morr_title">Morrill Hall</string>
+<string "morr_summary">MORR</string>
+<string "music_title">Lionel Hampton School of Music</string>
+<string "music_summary">MUSIC</string>
+<string "cnr_title">Natural Resources</string>
+<string "cnr_summary">CNR</string>
+<string "navy_title">Navy</string>
+<string "navy_summary">NAVY</string>
+<string "niccol_title">Niccolls</string>
+<string "niccol_summary">NICCOL</string>
+<string "peb_title">Physical Education</string>
+<string "peb_summary">PEB</string>
+<string "phi_title">Archie Phinney Hall</string>
+<string "phi_summary">PHI</string>
+<string "pool_title">Swim Center</string>
+<string "pool_summary">POOL</string>
+<string "rad_title">TV</string>
+<string "rad_summary">RAD</string>
+<string "ren_title">Renfrew Hall</string>
+<string "ren_summary">REN</string>
+<string "ridh_title">Ridenbaugh Hall</string>
+<string "ridh_summary">RIDH</string>
+<string "shoup_title">Shoup Hall</string>
+<string "shoup_summary">SHOUP</string>
+<string "shs_title">Student Health</string>
+<string "shs_summary">SHS</string>
+<string "src_title">Student Recreation Center</string>
+<string "src_summary">SRC</string>
+<string "sub_title">Student Union Building</string>
+<string "sub_summary">SUB</string>
+<string "tlc_title">Teaching & Learning Center</string>
+<string "tlc_summary">TLC</string>
+<string "vet sc_title">Holm Veterinary Science</string>
+<string "vet sc_summary">VET SC</string>
+<string "wallc_title">Wallace Residential Center</string>
+<string "wallc_summary">WALLC</string>
+<string "wicks_title">Wicks Field</string>
+<string "wicks_summary">WICKS</string>

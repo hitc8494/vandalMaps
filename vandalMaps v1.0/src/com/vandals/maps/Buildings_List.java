@@ -30,16 +30,22 @@ public class Buildings_List extends ListActivity{
     static final String[] FROM = {BuildingOpenHelper.C_NAME, BuildingOpenHelper.C_ABBRV, BuildingOpenHelper.C_DISPLAYED};
     static final int[] TO = { R.id.fullname, R.id.abbrev, R.id.cb };
     private static final String TAG = "Buildings_List";
+    SimpleCursorAdapter adapt;
+    Cursor myCur = null;
+    Bundle savedInstanceState2;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        savedInstanceState2 = savedInstanceState;
+        super.onCreate(savedInstanceState2);
+        
 
+        
         opener = new BuildingOpenHelper(this);
         db = opener.getReadableDatabase();
         dbWrite = opener.getWritableDatabase();
         
-        Cursor myCur = null;
+        
         try {
          myCur = db.query(BuildingOpenHelper.TABLE,null,null,null,null,null,BuildingOpenHelper._ID + " DESC");
         }
@@ -49,7 +55,7 @@ public class Buildings_List extends ListActivity{
         startManagingCursor(myCur);
 
         //using depracated SimpleCursorAdapter. Not quite sure what the flags need to be when using updated constructor
-        SimpleCursorAdapter adapt = new CheckBoxCursorAdapter(this, R.layout.buildinglisting, myCur, FROM, TO, dbWrite);
+        adapt = new CheckBoxCursorAdapter(this, R.layout.buildinglisting, myCur, FROM, TO, dbWrite);
         
         setListAdapter(adapt);
     }
@@ -69,6 +75,7 @@ public class Buildings_List extends ListActivity{
     
     public void onResume() {
         super.onResume();
+        onCreate(savedInstanceState2);
         db = opener.getReadableDatabase();
         dbWrite = opener.getWritableDatabase();
     }

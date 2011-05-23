@@ -1,0 +1,270 @@
+<CheckBoxPreference
+android:key="a&a"
+android:title="@string/a&a_title"
+android:summary="@string/a&a_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="aaid"
+android:title="@string/aaid_title"
+android:summary="@string/aaid_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="ad"
+android:title="@string/ad_title"
+android:summary="@string/ad_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="aeeb"
+android:title="@string/aeeb_title"
+android:summary="@string/aeeb_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="agbio"
+android:title="@string/agbio_title"
+android:summary="@string/agbio_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="ag sci"
+android:title="@string/ag sci_title"
+android:summary="@string/ag sci_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="alb"
+android:title="@string/alb_title"
+android:summary="@string/alb_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="alc"
+android:title="@string/alc_title"
+android:summary="@string/alc_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="arp"
+android:title="@string/arp_title"
+android:summary="@string/arp_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="bel"
+android:title="@string/bel_title"
+android:summary="@string/bel_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="bri"
+android:title="@string/bri_title"
+android:summary="@string/bri_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="ceb"
+android:title="@string/ceb_title"
+android:summary="@string/ceb_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="dairy"
+android:title="@string/dairy_title"
+android:summary="@string/dairy_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="ed"
+android:title="@string/ed_title"
+android:summary="@string/ed_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="ep"
+android:title="@string/ep_title"
+android:summary="@string/ep_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="fields"
+android:title="@string/fields_title"
+android:summary="@string/fields_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="frc"
+android:title="@string/frc_title"
+android:summary="@string/frc_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="gas"
+android:title="@string/gas_title"
+android:summary="@string/gas_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="gch"
+android:title="@string/gch_title"
+android:summary="@string/gch_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="gh"
+android:title="@string/gh_title"
+android:summary="@string/gh_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="gj"
+android:title="@string/gj_title"
+android:summary="@string/gj_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="hrtng"
+android:title="@string/hrtng_title"
+android:summary="@string/hrtng_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="idc"
+android:title="@string/idc_title"
+android:summary="@string/idc_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="incub"
+android:title="@string/incub_title"
+android:summary="@string/incub_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="ited"
+android:title="@string/ited_title"
+android:summary="@string/ited_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="jeb"
+android:title="@string/jeb_title"
+android:summary="@string/jeb_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="jml"
+android:title="@string/jml_title"
+android:summary="@string/jml_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="kibbie"
+android:title="@string/kibbie_title"
+android:summary="@string/kibbie_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="law"
+android:title="@string/law_title"
+android:summary="@string/law_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="lib"
+android:title="@string/lib_title"
+android:summary="@string/lib_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="life"
+android:title="@string/life_title"
+android:summary="@string/life_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="llc"
+android:title="@string/llc_title"
+android:summary="@string/llc_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="mccl"
+android:title="@string/mccl_title"
+android:summary="@string/mccl_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="m gym"
+android:title="@string/m gym_title"
+android:summary="@string/m gym_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="mines"
+android:title="@string/mines_title"
+android:summary="@string/mines_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="morr"
+android:title="@string/morr_title"
+android:summary="@string/morr_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="music"
+android:title="@string/music_title"
+android:summary="@string/music_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="cnr"
+android:title="@string/cnr_title"
+android:summary="@string/cnr_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="navy"
+android:title="@string/navy_title"
+android:summary="@string/navy_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="niccol"
+android:title="@string/niccol_title"
+android:summary="@string/niccol_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="peb"
+android:title="@string/peb_title"
+android:summary="@string/peb_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="phi"
+android:title="@string/phi_title"
+android:summary="@string/phi_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="pool"
+android:title="@string/pool_title"
+android:summary="@string/pool_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="rad"
+android:title="@string/rad_title"
+android:summary="@string/rad_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="ren"
+android:title="@string/ren_title"
+android:summary="@string/ren_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="ridh"
+android:title="@string/ridh_title"
+android:summary="@string/ridh_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="shoup"
+android:title="@string/shoup_title"
+android:summary="@string/shoup_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="shs"
+android:title="@string/shs_title"
+android:summary="@string/shs_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="src"
+android:title="@string/src_title"
+android:summary="@string/src_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="sub"
+android:title="@string/sub_title"
+android:summary="@string/sub_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="tlc"
+android:title="@string/tlc_title"
+android:summary="@string/tlc_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="vet sc"
+android:title="@string/vet sc_title"
+android:summary="@string/vet sc_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="wallc"
+android:title="@string/wallc_title"
+android:summary="@string/wallc_summary"
+android:defaultValue="false" />
+<CheckBoxPreference
+android:key="wicks"
+android:title="@string/wicks_title"
+android:summary="@string/wicks_summary"
+android:defaultValue="false" />

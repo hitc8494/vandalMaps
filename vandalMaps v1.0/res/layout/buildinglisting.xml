@@ -5,7 +5,8 @@
 	android:layout_height="wrap_content"
 	android:orientation="vertical"
 	android:id="@+id/layout"
-	android:stretchColumns="0">
+	android:stretchColumns="0"
+	android:focusable="true">
 	<TableRow>
 		<TableLayout
 			xmlns:android="http://schemas.android.com/apk/res/android"
@@ -19,7 +20,7 @@
 				 	android:id="@+id/fullname"
 				 	android:gravity="left"
 				 	android:padding="3dip"
-				 	android:textSize="12pt">
+				 	android:textSize="12pt">	
 				</TextView>
 			</TableRow>
 			<TableRow>

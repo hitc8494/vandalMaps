@@ -1,4 +1,4 @@
-package com.vandals.maps;
+    package com.vandals.maps;
 
 import android.app.Activity;
 import android.content.res.Configuration;

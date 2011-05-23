@@ -1,0 +1,13 @@
+TODO:
+Create TestProject
+Add specific onLongClick interaction to transfer to map (preferences?)
+
+
+
+
+Completed:
+Write Completion Report
+Create Custom Data Adapter
+Write XML for listrows
+Investigate Flags for SimpleCursorAdapter
+Write onClicked query and update interface

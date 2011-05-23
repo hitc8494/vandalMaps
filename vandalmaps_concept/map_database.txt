@@ -1,0 +1,49 @@
+A&A - Art & Architecture - 46.725624,-117.011497
+AAID - Art & Architecture Interior Design - 46.727676,-117.011368
+AD - Administration - 46.725948,-117.011143
+AEEB - Ag & Ext Education - 46.730066,-117.01876
+AGBIO - Agricultural Biotechnology - 46.725948,-117.011143
+AG SCI - Agricultural Science - 46.729044,-117.01389
+ALB - J.A. Albertson/Business - 46.725624,-117.011497
+ARP - Animal Research Pavilion - 46.728904,-117.024983
+BEL - Buchanan Engineering Lab - 46.729529,-117.010649
+BRI - Carol Ryrie Brink Hall - 46.728139,-117.012334
+ED - Education - 46.726043,-117.012302
+EP - Engineering/Physics - 46.729264,-117.009834
+FIELDS - Athletic Fields - 46.730897,-117.020295
+GAS - Graduate Art Studio - 46.724602,-117.01022
+GCH - Golf Clubhouse - 46723351,-117.016786
+GH - Greenhouse - 46730184,-117017602
+GJ - GaussJohnson Engineering Lab - 46.729485,-117.0114
+HRTNG - Hartung Theatre - 46.728897,-117.018009
+IDC - Idaho Commons - 46.727463,-117.012398
+INCUB - Business Technology Incubator - 46.724477,-117.002195
+ITED - Industrial Technology Education - 46.726109,-117.005768
+JEB - Janssen Engineering -46.728934,-117.011529
+JML - J.W. Martin Laboratory - 46.729617,-117.02022
+KIBBIE - KibbieASUI Activity Center - 46.726345,-117.017044
+LAW - Menard Law - 46.728154,-117.01581
+LIB - Library - 46.727441,-117.013986
+LIFE - Life Science South - 46.727154,-117.010446
+LLC - Living & Learning Community - 46.730478,-117.012645
+MCCL - McClure Hall - 46.728985,-117.010671
+M GYM - Memorial Gym - 46.726624,-117.013664
+MINES - Mines - 46.72847,-117.011057
+MORR - Morrill Hall - 46.728066,-117.010843
+MUSIC - Lionel Hampton School of Music - 46.725676,-117.007828
+CNR - Natural Resources - 46.729389,-117.012602
+NAVY - Navy - 46.728904,-117.012388
+NICCOL - Niccolls - 46.724852,-117.010006
+PEB - Physical Education - 46.725521,-117.013729
+PHI - Archie Phinney Hall - 46.728514,-117.012806
+POOL - Swim Center - 46.726051,-117.013686
+RADTV - RadioTV Center - 46.724764,-117.012141
+REN - Renfrew Hall - 46.728022,-117.014018
+RIDH - Ridenbaugh Hall - 46.724491,-117.008815
+SHOUP - Shoup Hall - 46.730162,-117.015435
+SHS - Student Health - 46.72722,-117.009212
+SRC - Student Recreation Center - 46.731956,-117.013514
+SUB - Student Union Building - 46.728683,-117.007205
+TLC - Teaching & Learning Center - 46.727433,-117.012902
+WALLC - Wallace Residential Center - 46.73039,-117.016293
+WICKS - Wicks Field - 46.730993,-117.019372
