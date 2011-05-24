@@ -33,13 +33,13 @@
 				</TextView>
 			</TableRow>
 		</TableLayout>
-		<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+		<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
 			android:text=""
 			android:id="@+id/cb"
 			android:layout_height="wrap_content"
 			android:checked="false"
 			android:layout_gravity="center_vertical|right"
 			android:padding="3dip">
-		</CheckBox>
+		</CheckedTextView>
 	</TableRow>
 </TableLayout>
