@@ -29,4 +29,9 @@ Add a new key, leave the name blank, and paste in the conent that you just copie
 
 Save the key, you are ready to push to our github!
 
+If you are still having errors, such as failing to 'ssh git@github.com', this one only seems to happen to 
+Linux users. To solve it, try this:
+
+    $ ssh-add ~/.ssh/id_rsa
+
 Badgers.
